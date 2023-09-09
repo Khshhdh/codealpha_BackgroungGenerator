@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodybg">
+    <div id="centerdiv">
+        <h1>BACKGROUND COLOR GENERATOR</h1>
+        <br><br>
+        <h2>PICK THE COLOR</h2>
+        <br><br>
+        <input type="color" name="" id="colorone" value="#657A99">
+        <input type="color" name="" id="colortwo" value="#95C42B">
+        <br><br>
+        <h3 id="showvalue"></h3>
+    </div>
+    <script>
+        const colorone = document.getElementById('colorone');
+        const colortwo = document.getElementById('colortwo');
+        const bodybg=document.getElementById('bodybg');
+        colorone.addEventListener('input', function(){
+        bodybg.style.background = `linear-gradient(to right,${colorone.value},${colortwo.value})`;
+        });
+        colortwo.addEventListener('input', function(){
+        bodybg.style.background = `linear-gradient(to right,${colorone.value},${colortwo.value})`;
+        });
+    </script>
+</body>
+</html>
